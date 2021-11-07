@@ -23,13 +23,6 @@ public class JunitUserRegistration {
 		return matcher.matches();
 	}
 
-	public boolean passwordRule1(String password) {
-		regex = "^[a-z]{8,}$";
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(password);
-		return matcher.matches();
-	}
-
 	//method to validate email
 	public boolean emailId(String emailIds) {
 		regex = "^[a-zA-Z0-9]+([.][0-9a-zA-z]+)*@[a-z]+.[a-z]{2,3}$";
@@ -44,5 +37,11 @@ public class JunitUserRegistration {
 		Matcher matcher = pattern.matcher(mobileNumber);
 		return matcher.matches();
 	}
-
+	//method to validate password
+	public boolean passwordRule1(String password) {
+        regex = "^[a-z](?=.*[A-Z]+).{8,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		return matcher.matches();
+	}
 }

@@ -59,14 +59,15 @@ public class JunitUserRegistrationTest {
 
 	@Test
 	public void givenPasswordRule1_IsProper_ReturnTrue() {
-		boolean actualResult = junitUserRegistration.passwordRule1("qwgthjkdl");
+		boolean actualResult = junitUserRegistration.passwordRule1("qwgthRLjkdl");
 		Assert.assertEquals(true, actualResult);
 	}
 
 	@Test
 	public void givenPasswordRule1_IsNotProper_ReturnFalse() {
-		boolean actualResult = junitUserRegistration.passwordRule1("jnsdsjRcvc");
+		boolean actualResult = junitUserRegistration.passwordRule1("jnsdjcvcp");
 		Assert.assertEquals(false, actualResult);
 	}
+	
 
 }
