@@ -14,11 +14,19 @@ public class JunitUserRegistration {
 		Matcher matcher = pattern.matcher(firstName);
 		return matcher.matches();
 	}
+
+	//method to validate last name
+	public boolean lastName(String lastName) {
+		regex = "^[A-Z]{1}[a-z]{2,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(lastName);
+		return matcher.matches();
+	}
 	
-	   public boolean lastName(String lastName) {
-	        regex = "^[A-Z]{1}[a-z]{2,}$";
+	  public boolean emailId(String emailIds) {
+			regex = "^[a-zA-Z0-9]+([.][0-9a-zA-z]+)*@[a-z]+.[a-z]{2,3}$";
 	        Pattern pattern = Pattern.compile(regex);
-	        Matcher matcher = pattern.matcher(lastName);
+	        Matcher matcher = pattern.matcher(emailIds);
 	        return matcher.matches();
 	    }
 
