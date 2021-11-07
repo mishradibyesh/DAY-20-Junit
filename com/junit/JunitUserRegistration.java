@@ -22,12 +22,20 @@ public class JunitUserRegistration {
 		Matcher matcher = pattern.matcher(lastName);
 		return matcher.matches();
 	}
-	
-	  public boolean emailId(String emailIds) {
-			regex = "^[a-zA-Z0-9]+([.][0-9a-zA-z]+)*@[a-z]+.[a-z]{2,3}$";
-	        Pattern pattern = Pattern.compile(regex);
-	        Matcher matcher = pattern.matcher(emailIds);
-	        return matcher.matches();
-	    }
+
+	//method to validate email
+	public boolean emailId(String emailIds) {
+		regex = "^[a-zA-Z0-9]+([.][0-9a-zA-z]+)*@[a-z]+.[a-z]{2,3}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(emailIds);
+		return matcher.matches();
+	}
+
+	public boolean mobileNumber(String mobileNumber) {
+		regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(mobileNumber);
+		return matcher.matches();
+	}
 
 }
